@@ -6,7 +6,9 @@ const app = express();
 const router = require('./router');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:auth/auth');
+mongoose.connect('mongodb://localhost:auth/auth', {
+    useNewUrlParser: true
+});
 
 app.use(morgan('combined'));
 app.use(bodyParser.json({ type: '*/*'}));
