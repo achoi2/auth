@@ -21,4 +21,4 @@ const jwtLogin = new JwtStrategy(jwtOptions, function(payload, done) {
     });
 });
 
-passport.usd(jwtLogin);
+passport.use(jwtLogin);
